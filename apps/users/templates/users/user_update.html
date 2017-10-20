@@ -10,6 +10,9 @@
         <div class="container">
             <br>
             <h1>Edit User {{user.name}}</h1>
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
             <form action="/users/update{{user.id}}" method="post">
                 {% csrf_token %}
                 <p>Name:</p>
